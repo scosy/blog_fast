@@ -18,8 +18,8 @@
     <%= form.text_area :body %>
   </div>
   <div class="posts_form">
-    <%= f.label :tag_list, "Tags (optional)" %>
-    <%= f.text_field :tag_list %>	
+    <%= form.label :tag_ids, "Tags (optional)" %>
+    <%= form.collection_check_boxes(:tag_ids, Tag.all, :id, :title) %>	
   </div>
   <div class="posts_form">
     <%= form.submit %>
